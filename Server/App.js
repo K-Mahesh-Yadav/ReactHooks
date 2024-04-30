@@ -34,10 +34,8 @@ const Counter = mongoose.model("Counter", counterSchema);
 
 // Routes
 app.get("/api/counter", async (req, res) => {
-  console.log("Reached GET method");
   try {
     const counter = await Counter.findOne();
-    console.log(counter);
     res.json(counter);
   } catch (err) {
     console.error(err);
@@ -78,10 +76,8 @@ app.post("/api/counter/decrement", async (req, res) => {
 // my counter
 
 app.get("/api/Mycounter", async (req, res) => {
-  console.log("Reached GET method");
   try {
     const counter = await Counter.findOne();
-    console.log(counter);
     res.json(counter);
   } catch (err) {
     console.error(err);
