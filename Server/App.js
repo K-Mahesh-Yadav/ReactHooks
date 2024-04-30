@@ -12,8 +12,7 @@ const MONGODB_URI =
 app.use(express.json());
 app.use(
   cors({
-    origin:
-      "https://react-hooks-gksci2j9r-kursali-mahesh-yadavs-projects.vercel.app",
+    origin: "*",
   })
 );
 
