@@ -62,9 +62,7 @@ const Counter = () => {
 
   const fetchCounter = useCallback(async () => {
     try {
-      const response = await axios.get(
-        "https://react-hooks-gksci2j9r-kursali-mahesh-yadavs-projects.vercel.app/api/counter"
-      );
+      const response = await axios.get("http://localhost:5000/api/counter");
       dispatch({ type: "SET", count: response.data.count });
     } catch (err) {
       console.error(err);
@@ -77,9 +75,7 @@ const Counter = () => {
 
   const incrementCounter = useCallback(async () => {
     try {
-      await axios.post(
-        "https://react-hooks-gksci2j9r-kursali-mahesh-yadavs-projects.vercel.app/api/counter/increment"
-      );
+      await axios.post("http://localhost:5000/api/counter/increment");
       dispatch({ type: "INCREMENT" });
     } catch (err) {
       console.error(err);
@@ -88,9 +84,7 @@ const Counter = () => {
 
   const decrementCounter = useCallback(async () => {
     try {
-      await axios.post(
-        "https://react-hooks-gksci2j9r-kursali-mahesh-yadavs-projects.vercel.app/api/counter/decrement"
-      );
+      await axios.post("http://localhost:5000/api/counter/decrement");
       dispatch({ type: "DECREMENT" });
     } catch (err) {
       console.error(err);
@@ -114,9 +108,7 @@ const MyCounter = () => {
 
   const fetchCounter = useCallback(async () => {
     try {
-      const response = await axios.get(
-        "https://react-hooks-gksci2j9r-kursali-mahesh-yadavs-projects.vercel.app/api/Mycounter"
-      );
+      const response = await axios.get("http://localhost:5000/api/Mycounter");
       dispatch({ type: "MySET", Mycount: response.data.Mycount });
     } catch (err) {
       console.error(err);
@@ -129,9 +121,7 @@ const MyCounter = () => {
 
   const incrementCounter = useCallback(async () => {
     try {
-      await axios.post(
-        "https://react-hooks-gksci2j9r-kursali-mahesh-yadavs-projects.vercel.app/api/Mycounter/increment"
-      );
+      await axios.post("http://localhost:5000/api/Mycounter/increment");
       dispatch({ type: "MyINCREMENT" });
     } catch (err) {
       console.error(err);
@@ -140,9 +130,7 @@ const MyCounter = () => {
 
   const decrementCounter = useCallback(async () => {
     try {
-      await axios.post(
-        "https://react-hooks-gksci2j9r-kursali-mahesh-yadavs-projects.vercel.app/api/Mycounter/decrement"
-      );
+      await axios.post("http://localhost:5000/api/Mycounter/decrement");
       dispatch({ type: "MyDECREMENT" });
     } catch (err) {
       console.error(err);
