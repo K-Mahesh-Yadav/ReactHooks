@@ -10,7 +10,12 @@ const MONGODB_URI =
   process.env.MONGODB_URI || "mongodb://0.0.0.0:27017/counter_db";
 
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin:
+      "https://react-hooks-gksci2j9r-kursali-mahesh-yadavs-projects.vercel.app",
+  })
+);
 
 // MongoDB Connection
 mongoose
